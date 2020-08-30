@@ -3,12 +3,12 @@
     <v-app-bar app dark color="secondary" class="title darken-1">
       RPUK Zone Stats
       <v-spacer></v-spacer>
-      <span class="text-body-2">
+      <span class="text-body-2 d-none d-sm-inline">
         Last Updated: {{ this.apiData.lastCall }}
       </span>
       <v-btn
         color="success"
-        class="ml-4"
+        class="ml-4 d-none d-sm-inline"
         :disabled="btnCooldown"
         @click="refresh"
         >{{ !this.btnCooldown ? "Refresh" : "Please Wait" }}</v-btn
@@ -22,6 +22,7 @@
           slider-color="white"
           background-color="secondary"
           dark
+          show-arrows
         >
           <v-tab v-for="title in titles" :key="title">
             {{ title }}
@@ -29,13 +30,13 @@
           <v-tabs-items v-model="tab" class="pa-4">
             <v-tab-item>
               <v-row>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <PointsTable
                     title="Points in last 24 Hours"
                     :entries="apiData.points.rolling24h"
                   />
                 </v-col>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <KillsTable
                     title="Kills in last 24 Hours"
                     :entries="apiData.kills.rolling24h"
@@ -45,13 +46,13 @@
             </v-tab-item>
             <v-tab-item>
               <v-row>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <PointsTable
                     title="Todays points"
                     :entries="apiData.points.currentDay"
                   />
                 </v-col>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <KillsTable
                     title="Todays kills"
                     :entries="apiData.kills.currentDay"
@@ -61,13 +62,13 @@
             </v-tab-item>
             <v-tab-item>
               <v-row>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <PointsTable
                     title="This weeks points"
                     :entries="apiData.points.currentWeek"
                   />
                 </v-col>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <KillsTable
                     title="This weeks kills"
                     :entries="apiData.kills.currentWeek"
@@ -77,13 +78,13 @@
             </v-tab-item>
             <v-tab-item>
               <v-row>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <PointsTable
                     title="This months points"
                     :entries="apiData.points.currentMonth"
                   />
                 </v-col>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <KillsTable
                     title="This months kills"
                     :entries="apiData.kills.currentMonth"
@@ -93,13 +94,13 @@
             </v-tab-item>
             <v-tab-item>
               <v-row>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <PointsTable
                     title="Points of all time"
                     :entries="apiData.points.allTime"
                   />
                 </v-col>
-                <v-col>
+                <v-col cols="12" md="6" sm="12">
                   <KillsTable
                     title="Kills of all time"
                     :entries="apiData.kills.allTime"
@@ -191,6 +192,12 @@ export default {
 
 <style lang="scss">
 html {
-  overflow: hidden;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    overflow-y: scroll;
+  }
 }
 </style>
