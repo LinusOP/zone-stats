@@ -29,10 +29,18 @@ export default {
       ],
     });
   },
+  methods: {
+    formatPercentage() {
+      this.entries.forEach((entry, i) => {
+        this.entries[i].points_percent = `${(entry.points_percent).toFixed(2)}%`;
+      });
+    },
+  },
   mounted() {
-    this.entries.forEach((entry, i) => {
-      this.entries[i].points_percent = `${(entry.points_percent).toFixed(2)}%`;
-    });
+    this.formatPercentage();
+  },
+  updated() {
+    this.formatPercentage();
   },
 };
 </script>
