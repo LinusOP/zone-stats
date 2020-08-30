@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app dark color="secondary" class="title darken-1">
+    <v-app-bar app dark color="secondary" class="text-h4 darken-1">
       RPUK Zone Stats
       <v-spacer></v-spacer>
       <span class="text-body-2 d-none d-sm-inline">
@@ -19,7 +19,6 @@
         <v-tabs
           v-model="tab"
           color="white"
-          slider-color="white"
           background-color="secondary"
           dark
           show-arrows
@@ -123,9 +122,23 @@
         </v-row>
       </v-container>
     </v-main>
-    <v-footer class="justify-center text-subtitle-2" app dark>
-      Made by Nomad | Data and API provided by
-      <a href="https://roleplay.co.uk" target="_blank"> Roleplay UK</a>
+    <v-footer class="justify-center text-caption py-1" app dark>
+      <span
+        >Made by
+        <a
+          href="https://www.roleplay.co.uk/profile/40332-a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Nomad</a
+        >
+        | Data and API provided by
+        <a
+          href="https://www.roleplay.co.uk"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Roleplay UK</a
+        >
+      </span>
     </v-footer>
   </v-app>
 </template>
@@ -151,7 +164,7 @@ export default {
       },
       tab: null,
       titles: [
-        "Last 24",
+        "Last 24h",
         "Daily",
         "Weekly",
         "Monthly",
