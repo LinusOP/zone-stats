@@ -3,13 +3,8 @@
     <v-card-title>
       {{ this.title }}
     </v-card-title>
-    <v-data-table
-      :headers="headers"
-      :items="entries"
-      class="elevation-1"
-      dense
-      hide-default-footer
-    >
+    <v-divider></v-divider>
+    <v-data-table :headers="headers" :items="entries" class="elevation-1">
     </v-data-table>
   </v-card>
 </template>
