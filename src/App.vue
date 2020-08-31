@@ -146,16 +146,13 @@
           </v-tabs-items>
         </v-tabs>
       </v-container>
-      <v-container v-else fill-height fluid>
-        <v-row align="center" justify="center">
-          <v-col cols="1">
-            <v-progress-circular
-              indeterminate
-              color="primary"
-              size="150"
-            ></v-progress-circular>
-          </v-col>
-        </v-row>
+      <v-container class="pa-0 d-flex justify-center" v-else fill-height fluid>
+        <v-progress-circular
+          indeterminate
+          color="secondary"
+          size="175"
+          width="7"
+        ></v-progress-circular>
       </v-container>
     </v-main>
     <v-footer class="justify-center text-caption py-1" app dark>
