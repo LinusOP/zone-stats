@@ -4,7 +4,15 @@
       {{ this.title }}
     </v-card-title>
     <v-divider></v-divider>
-    <v-data-table :headers="headers" :items="entries" hide-default-footer>
+    <v-data-table
+      :headers="headers"
+      :items="entries"
+      item-class="table-row"
+      hide-default-footer
+      must-sort
+      sort-by="total_points"
+      :sort-desc="true"
+    >
     </v-data-table>
   </v-card>
 </template>
