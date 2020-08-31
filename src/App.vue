@@ -126,7 +126,7 @@
       <span
         >Made by
         <a
-          href="https://www.roleplay.co.uk/profile/40332-a/"
+          href="https://www.roleplay.co.uk/profile/40332-nomad/"
           target="_blank"
           rel="noopener noreferrer"
           >Nomad</a
