@@ -159,7 +159,7 @@
       </v-container>
     </v-main>
     <v-footer
-      class="justify-center py-1 text-center hidden-xs-only"
+      class="justify-center text-center hidden-xs-only"
       app
       dark
       color="#1e2124"
