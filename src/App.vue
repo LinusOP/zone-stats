@@ -28,14 +28,14 @@
           </v-tab>
           <v-tabs-items v-model="tab" class="pa-4">
             <v-tab-item>
-              <v-row>
-                <v-col cols="12" md="6" sm="12">
+              <v-row justify="center">
+                <v-col cols="12" md="4" sm="12">
                   <PointsTable
                     title="Points in last 24 Hours"
                     :entries="apiData.points.rolling24h"
                   />
                 </v-col>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="4" sm="12">
                   <KillsTable
                     title="Kills in last 24 Hours"
                     :entries="apiData.kills.rolling24h"
@@ -45,61 +45,97 @@
             </v-tab-item>
             <v-tab-item>
               <v-row>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="3" sm="12">
                   <PointsTable
                     title="Todays points"
                     :entries="apiData.points.currentDay"
                   />
                 </v-col>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="3" sm="12">
+                  <PointsTable
+                    title="Yesterdays points"
+                    :entries="apiData.points.lastDay"
+                  />
+                </v-col>
+                <v-col cols="12" md="3" sm="12">
                   <KillsTable
                     title="Todays kills"
                     :entries="apiData.kills.currentDay"
                   />
                 </v-col>
+                <v-col cols="12" md="3" sm="12">
+                  <KillsTable
+                    title="Yesterdays kills"
+                    :entries="apiData.kills.lastDay"
+                  />
+                </v-col>
               </v-row>
             </v-tab-item>
             <v-tab-item>
               <v-row>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="3" sm="12">
                   <PointsTable
                     title="This weeks points"
                     :entries="apiData.points.currentWeek"
                   />
                 </v-col>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="3" sm="12">
+                  <PointsTable
+                    title="Last weeks points"
+                    :entries="apiData.points.lastWeek"
+                  />
+                </v-col>
+                <v-col cols="12" md="3" sm="12">
                   <KillsTable
                     title="This weeks kills"
                     :entries="apiData.kills.currentWeek"
                   />
                 </v-col>
+                <v-col cols="12" md="3" sm="12">
+                  <KillsTable
+                    title="Last weeks kills"
+                    :entries="apiData.kills.lastWeek"
+                  />
+                </v-col>
               </v-row>
             </v-tab-item>
             <v-tab-item>
               <v-row>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="3" sm="12">
                   <PointsTable
                     title="This months points"
                     :entries="apiData.points.currentMonth"
                   />
                 </v-col>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="3" sm="12">
+                  <PointsTable
+                    title="Last months points"
+                    :entries="apiData.points.lastMonth"
+                  />
+                </v-col>
+                <v-col cols="12" md="3" sm="12">
                   <KillsTable
                     title="This months kills"
                     :entries="apiData.kills.currentMonth"
                   />
                 </v-col>
+                <v-col cols="12" md="3" sm="12">
+                  <KillsTable
+                    title="Last months kills"
+                    :entries="apiData.kills.lastMonth"
+                  />
+                </v-col>
               </v-row>
             </v-tab-item>
             <v-tab-item>
-              <v-row>
-                <v-col cols="12" md="6" sm="12">
+              <v-row justify="center">
+                <v-col cols="12" md="4" sm="12">
                   <PointsTable
                     title="Points of all time"
                     :entries="apiData.points.allTime"
                   />
                 </v-col>
-                <v-col cols="12" md="6" sm="12">
+                <v-col cols="12" md="4" sm="12">
                   <KillsTable
                     title="Kills of all time"
                     :entries="apiData.kills.allTime"
