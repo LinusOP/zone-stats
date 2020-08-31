@@ -159,7 +159,7 @@
       </v-container>
     </v-main>
     <v-footer
-      class="justify-center text-center hidden-xs-only"
+      class="justify-center text-center hidden-xs-only flex-column"
       app
       dark
       color="#1e2124"
@@ -179,12 +179,11 @@
           rel="noopener noreferrer"
           >Roleplay UK</a
         >
-        <br />
-        <span class="text-caption"
-          >This website is not official and is not provided nor maintained by
-          Roleplay UK</span
-        >
       </span>
+      <span class="text-caption"
+        >This website is not official and is not provided nor maintained by
+        Roleplay UK</span
+      >
     </v-footer>
   </v-app>
 </template>
