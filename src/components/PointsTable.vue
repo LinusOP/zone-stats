@@ -1,15 +1,10 @@
 <template>
-  <v-card>
+  <v-card class="elevation-3">
     <v-card-title>
       {{ this.title }}
     </v-card-title>
     <v-divider></v-divider>
-    <v-data-table
-      :headers="headers"
-      :items="entries"
-      class="elevation-1"
-      hide-default-footer
-    >
+    <v-data-table :headers="headers" :items="entries" hide-default-footer>
     </v-data-table>
   </v-card>
 </template>
