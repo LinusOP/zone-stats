@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app dark color="secondary" class="text-h4 darken-1">
+    <v-app-bar app dark color="#141414" class="text-h4">
       <v-icon x-large class="mr-3">mdi-target-account</v-icon>
       RPUK Zone Stats
       <v-spacer></v-spacer>
@@ -22,7 +22,7 @@
         <v-tabs
           v-model="tab"
           color="white"
-          background-color="secondary"
+          background-color="#1e2124"
           dark
           show-arrows
         >
@@ -152,13 +152,13 @@
       <v-container class="pa-0 d-flex justify-center" v-else fill-height fluid>
         <v-progress-circular
           indeterminate
-          color="secondary"
+          color="#171717"
           size="175"
           width="7"
         ></v-progress-circular>
       </v-container>
     </v-main>
-    <v-footer class="justify-center text-caption py-1" app dark>
+    <v-footer class="justify-center text-caption py-1" app dark color="#1e2124">
       <span
         >Made by
         <a
@@ -248,5 +248,22 @@ html {
   html {
     overflow-y: scroll;
   }
+}
+
+.v-data-table {
+  background-color: #23272a !important;
+}
+
+tr:hover {
+  background-color: #2c2f33 !important;
+}
+
+td {
+  color: #e0e0e0;
+}
+
+.v-main__wrap,
+.v-tabs-items {
+  background-color: #2c2f33 !important;
 }
 </style>

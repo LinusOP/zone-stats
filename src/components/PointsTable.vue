@@ -1,5 +1,5 @@
 <template>
-  <v-card class="elevation-3">
+  <v-card class="elevation-3 grey--text text--lighten-3" color="#23272A" dark>
     <v-card-title>
       {{ this.title }}
     </v-card-title>
