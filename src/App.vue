@@ -174,6 +174,7 @@
           rel="noopener noreferrer"
           >Roleplay UK</a
         >
+        | This website is not an official Roleplay UK site
       </span>
     </v-footer>
   </v-app>
