@@ -4,7 +4,12 @@
       {{ this.title }}
     </v-card-title>
     <v-divider></v-divider>
-    <v-data-table :headers="headers" :items="entries" class="elevation-1">
+    <v-data-table
+      :headers="headers"
+      :items="entries"
+      class="elevation-1"
+      hide-default-footer
+    >
     </v-data-table>
   </v-card>
 </template>
