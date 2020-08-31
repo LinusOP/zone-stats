@@ -4,12 +4,12 @@
       <v-icon x-large class="mr-3">mdi-target-account</v-icon>
       RPUK Zone Stats
       <v-spacer></v-spacer>
-      <span v-if="!loading" class="text-body-2 grey--text d-none d-sm-inline">
+      <span v-if="!loading" class="text-body-2 grey--text hidden-xs-only">
         Last Updated: {{ this.apiData.lastCall }}
       </span>
       <v-btn
         color="#7289DA"
-        class="ml-4 d-none d-sm-inline"
+        class="ml-4 hidden-xs-only"
         width="134px"
         v-if="!loading"
         :disabled="btnCooldown"
@@ -158,8 +158,13 @@
         ></v-progress-circular>
       </v-container>
     </v-main>
-    <v-footer class="justify-center text-caption py-1" app dark color="#1e2124">
-      <span
+    <v-footer
+      class="justify-center py-1 text-center hidden-xs-only"
+      app
+      dark
+      color="#1e2124"
+    >
+      <span class="text-caption text-md-body-2"
         >Made with ❤ by
         <a
           href="https://www.roleplay.co.uk/profile/40332-nomad/"
