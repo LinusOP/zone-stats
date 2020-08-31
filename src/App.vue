@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app dark color="#141414" class="text-h4">
+    <v-app-bar app dark color="#141414" class="text-h5 text-md-h4">
       <v-icon x-large class="mr-3">mdi-target-account</v-icon>
       RPUK Zone Stats
       <v-spacer></v-spacer>
@@ -179,7 +179,11 @@
           rel="noopener noreferrer"
           >Roleplay UK</a
         >
-        | This website is not an official Roleplay UK site
+        <br />
+        <span class="text-caption"
+          >This website is not official and is not provided nor maintained by
+          Roleplay UK</span
+        >
       </span>
     </v-footer>
   </v-app>
