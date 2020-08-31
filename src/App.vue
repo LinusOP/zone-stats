@@ -3,12 +3,14 @@
     <v-app-bar app dark color="secondary" class="text-h4 darken-1">
       RPUK Zone Stats
       <v-spacer></v-spacer>
-      <span class="text-body-2 d-none d-sm-inline">
+      <span v-if="!loading" class="text-body-2 grey--text d-none d-sm-inline">
         Last Updated: {{ this.apiData.lastCall }}
       </span>
       <v-btn
         color="success"
         class="ml-4 d-none d-sm-inline"
+        width="134px"
+        v-if="!loading"
         :disabled="btnCooldown"
         @click="refresh"
         >{{ !this.btnCooldown ? "Refresh" : "Please Wait" }}</v-btn
