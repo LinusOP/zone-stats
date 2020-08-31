@@ -8,7 +8,7 @@
         Last Updated: {{ this.apiData.lastCall }}
       </span>
       <v-btn
-        color="success"
+        color="#7289DA"
         class="ml-4 d-none d-sm-inline"
         width="134px"
         v-if="!loading"
@@ -160,7 +160,7 @@
     </v-main>
     <v-footer class="justify-center text-caption py-1" app dark color="#1e2124">
       <span
-        >Made by
+        >Made with ❤ by
         <a
           href="https://www.roleplay.co.uk/profile/40332-nomad/"
           target="_blank"
@@ -243,6 +243,16 @@ export default {
 <style lang="scss">
 html {
   overflow-y: hidden;
+}
+
+a {
+  color: #7289da !important;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 1264px) {
