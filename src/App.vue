@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app dark color="secondary" class="text-h4 darken-1">
+      <v-icon x-large class="mr-3">mdi-target-account</v-icon>
       RPUK Zone Stats
       <v-spacer></v-spacer>
       <span v-if="!loading" class="text-body-2 grey--text d-none d-sm-inline">
