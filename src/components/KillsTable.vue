@@ -20,7 +20,6 @@ export default {
       headers: [
         {
           text: "Gang",
-          align: "start",
           sortable: false,
           value: "group",
         },

@@ -20,12 +20,17 @@ export default {
       headers: [
         {
           text: "Gang",
-          align: "start",
           sortable: false,
           value: "group",
+          width: "40%",
         },
-        { text: "Total Points", value: "total_points" },
-        { text: "Percentage of points", value: "points_percent" },
+        {
+          text: "Total Points",
+          value: "total_points",
+          align: "center",
+          width: "30%",
+        },
+        { text: "Percentage of points (%)", value: "points_percent", align: "center" },
       ],
     });
   },
