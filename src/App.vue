@@ -30,15 +30,16 @@
             {{ title }}
           </v-tab>
           <v-tabs-items v-model="tab" class="pa-4" dark>
+            <!-- Last 24 -->
             <v-tab-item>
               <v-row justify="center">
-                <v-col cols="12" lg="4" md="6" sm="12">
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <PointsTable
                     title="Points in last 24 Hours"
                     :entries="apiData.points.rolling24h"
                   />
                 </v-col>
-                <v-col cols="12" lg="4" md="6" sm="12">
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <KillsTable
                     title="Kills in last 24 Hours"
                     :entries="apiData.kills.rolling24h"
@@ -46,27 +47,28 @@
                 </v-col>
               </v-row>
             </v-tab-item>
+            <!-- Daily -->
             <v-tab-item>
-              <v-row>
-                <v-col cols="12" lg="3" md="6" sm="12">
+              <v-row justify="center">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <PointsTable
                     title="Todays points"
                     :entries="apiData.points.currentDay"
                   />
                 </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <PointsTable
                     title="Yesterdays points"
                     :entries="apiData.points.lastDay"
                   />
                 </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
                     title="Todays kills"
                     :entries="apiData.kills.currentDay"
                   />
                 </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
                     title="Yesterdays kills"
                     :entries="apiData.kills.lastDay"
@@ -74,27 +76,28 @@
                 </v-col>
               </v-row>
             </v-tab-item>
+            <!-- Weekly -->
             <v-tab-item>
-              <v-row>
-                <v-col cols="12" lg="3" md="6" sm="12">
+              <v-row justify="center">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <PointsTable
                     title="This weeks points"
                     :entries="apiData.points.currentWeek"
                   />
                 </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
-                  <PointsTable
-                    title="Last weeks points"
-                    :entries="apiData.points.lastWeek"
-                  />
-                </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
                     title="This weeks kills"
                     :entries="apiData.kills.currentWeek"
                   />
                 </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
+                <v-col cols="12" xl="3" md="6" sm="12">
+                  <PointsTable
+                    title="Last weeks points"
+                    :entries="apiData.points.lastWeek"
+                  />
+                </v-col>
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
                     title="Last weeks kills"
                     :entries="apiData.kills.lastWeek"
@@ -102,27 +105,28 @@
                 </v-col>
               </v-row>
             </v-tab-item>
+            <!-- Monthly -->
             <v-tab-item>
-              <v-row>
-                <v-col cols="12" lg="3" md="6" sm="12">
+              <v-row justify="center">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <PointsTable
                     title="This months points"
                     :entries="apiData.points.currentMonth"
                   />
                 </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
-                  <PointsTable
-                    title="Last months points"
-                    :entries="apiData.points.lastMonth"
-                  />
-                </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
                     title="This months kills"
                     :entries="apiData.kills.currentMonth"
                   />
                 </v-col>
-                <v-col cols="12" lg="3" md="6" sm="12">
+                <v-col cols="12" xl="3" md="6" sm="12">
+                  <PointsTable
+                    title="Last months points"
+                    :entries="apiData.points.lastMonth"
+                  />
+                </v-col>
+                <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
                     title="Last months kills"
                     :entries="apiData.kills.lastMonth"
@@ -130,15 +134,16 @@
                 </v-col>
               </v-row>
             </v-tab-item>
+            <!-- All time -->
             <v-tab-item>
               <v-row justify="center">
-                <v-col cols="12" lg="4" md="6" sm="12">
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <PointsTable
                     title="Points of all time"
                     :entries="apiData.points.allTime"
                   />
                 </v-col>
-                <v-col cols="12" lg="4" md="6" sm="12">
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <KillsTable
                     title="Kills of all time"
                     :entries="apiData.kills.allTime"
@@ -149,13 +154,19 @@
           </v-tabs-items>
         </v-tabs>
       </v-container>
-      <v-container class="pa-0 d-flex justify-center" v-else fill-height fluid>
+      <v-container
+        class="pa-0 d-flex flex-column justify-center"
+        v-else
+        fill-height
+        fluid
+      >
         <v-progress-circular
           indeterminate
           color="#171717"
           size="175"
           width="7"
         ></v-progress-circular>
+        <h2 class="white--text">Loading Data</h2>
       </v-container>
     </v-main>
     <v-footer
