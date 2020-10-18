@@ -242,7 +242,7 @@ export default {
 
 <style lang="scss">
 html {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 a {
@@ -252,12 +252,6 @@ a {
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-@media screen and (max-width: 1264px) {
-  html {
-    overflow-y: scroll;
   }
 }
 
