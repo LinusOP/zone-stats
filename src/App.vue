@@ -204,9 +204,6 @@ export default {
     return {
       loading: true,
       btnCooldown: false,
-      apiData: {
-        yeet: "yeet",
-      },
       tab: null,
       titles: ["Last 24h", "Daily", "Weekly", "Monthly", "All Time"],
     };
