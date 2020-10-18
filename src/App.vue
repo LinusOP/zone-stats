@@ -201,31 +201,24 @@ export default {
     KillsTable,
   },
   data() {
-    return ({
+    return {
       loading: true,
       btnCooldown: false,
       apiData: {
         yeet: "yeet",
       },
       tab: null,
-      titles: [
-        "Last 24h",
-        "Daily",
-        "Weekly",
-        "Monthly",
-        "All Time",
-      ],
-    });
+      titles: ["Last 24h", "Daily", "Weekly", "Monthly", "All Time"],
+    };
   },
   methods: {
     refreshData() {
-      getApiData()
-        .then((data) => {
-          this.apiData = {
-            lastCall: moment(new Date()).format("HH:mm:ss zz"),
-            ...data,
-          };
-        });
+      getApiData().then((data) => {
+        this.apiData = {
+          lastCall: moment(new Date()).format("HH:mm:ss zz"),
+          ...data,
+        };
+      });
     },
     refresh() {
       this.refreshData();
@@ -235,15 +228,14 @@ export default {
       }, 30 * 1000);
     },
   },
-  created() {
-    getApiData()
-      .then((data) => {
-        this.loading = false;
-        this.apiData = {
-          lastCall: moment(new Date()).format("HH:mm:ss zz"),
-          ...data,
-        };
-      });
+  mounted() {
+    getApiData().then((data) => {
+      this.loading = false;
+      this.apiData = {
+        lastCall: moment(new Date()).format("HH:mm:ss zz"),
+        ...data,
+      };
+    });
   },
 };
 </script>

@@ -24,7 +24,8 @@ export default {
     entries: Array,
   },
   data() {
-    return ({
+    return {
+      expanded: [],
       headers: [
         {
           text: "Gang",
