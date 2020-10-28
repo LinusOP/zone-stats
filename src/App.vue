@@ -5,7 +5,7 @@
       RPUK Zone Stats
       <v-spacer></v-spacer>
       <span v-if="!loading" class="text-body-2 grey--text hidden-xs-only">
-        Last Updated: {{ this.apiData.lastCall }}
+        Last Updated: {{ this.lastCall }}
       </span>
       <v-btn
         color="#7289DA"
@@ -14,7 +14,7 @@
         v-if="!loading"
         :disabled="btnCooldown"
         @click="refresh"
-        >{{ !this.btnCooldown ? "Refresh" : "Please Wait" }}</v-btn
+        >{{ !this.btnCooldown ? "Refresh" : "On Cooldown" }}</v-btn
       >
     </v-app-bar>
     <v-main>
@@ -217,32 +217,30 @@ export default {
       btnCooldown: false,
       tab: null,
       titles: ["Last 24h", "Daily", "Weekly", "Monthly", "All Time"],
+      lastCall: moment(new Date()).format("HH:mm:ss zz"),
     };
   },
   methods: {
     refreshData() {
       getApiData().then((data) => {
-        this.apiData = {
-          lastCall: moment(new Date()).format("HH:mm:ss zz"),
-          ...data,
-        };
+        this.apiData = data;
+        this.lastCall = moment(new Date()).format("HH:mm:ss zz");
       });
     },
     refresh() {
       this.refreshData();
+
       this.btnCooldown = true;
       setTimeout(() => {
         this.btnCooldown = false;
-      }, 30 * 1000);
+      }, 15 * 1000);
     },
   },
   mounted() {
     getApiData().then((data) => {
+      this.apiData = data;
+      this.lastCall = moment(new Date()).format("HH:mm:ss zz");
       this.loading = false;
-      this.apiData = {
-        lastCall: moment(new Date()).format("HH:mm:ss zz"),
-        ...data,
-      };
     });
   },
 };
