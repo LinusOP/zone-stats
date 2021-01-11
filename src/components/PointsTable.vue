@@ -26,19 +26,9 @@ export default {
   data() {
     return ({
       headers: [
-        {
-          text: "Gang",
-          sortable: false,
-          value: "group",
-          width: "40%",
-        },
-        {
-          text: "Total Points",
-          value: "total_points",
-          align: "center",
-          width: "30%",
-        },
-        { text: "Percentage of points (%)", value: "points_percent", align: "center" },
+        { text: "Gang", sortable: false, value: "group" },
+        { text: "Total Points", value: "total_points", align: "center" },
+        { text: "Percentage of points", value: "points_percent", align: "center" },
       ],
     });
   },
