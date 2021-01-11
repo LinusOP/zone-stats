@@ -13,6 +13,9 @@
       sort-by="total_points"
       :sort-desc="true"
     >
+      <template #[`item.points_percent`]="{ value }">
+        {{ value | formatPercentage }}%
+      </template>
     </v-data-table>
   </v-card>
 </template>
@@ -32,18 +35,8 @@ export default {
       ],
     });
   },
-  methods: {
-    formatPercentage() {
-      this.entries.forEach((entry, i) => {
-        this.entries[i].points_percent = entry.points_percent.toFixed(2);
-      });
-    },
-  },
-  mounted() {
-    this.formatPercentage();
-  },
-  updated() {
-    this.formatPercentage();
+  filters: {
+    formatPercentage: (val) => val.toFixed(2),
   },
 };
 </script>

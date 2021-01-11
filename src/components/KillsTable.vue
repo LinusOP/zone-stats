@@ -6,7 +6,7 @@
     <v-divider></v-divider>
     <v-data-table
       :headers="headers"
-      :items="items"
+      :items="entries"
       hide-default-footer
       must-sort
       sort-by="kills"
@@ -16,6 +16,12 @@
       :expanded.sync="expanded"
       item-key="group"
     >
+      <template #[`item.kd_ratio`]="{ item }">
+        {{
+          (item.deaths > 0 ? item.kills / item.deaths : item.kills)
+            | formatPercentage
+        }}
+      </template>
       <template v-slot:expanded-item="{ headers, item }">
         <td :colspan="headers.length">
           <div class="d-flex justify-space-around">
@@ -47,22 +53,8 @@ export default {
       ],
     };
   },
-  computed: {
-    items() {
-      const items = [];
-
-      this.entries.forEach((entry) => {
-        let kd = entry.kills.toFixed(2);
-        if (entry.deaths > 0) {
-          kd = (entry.kills / entry.deaths).toFixed(2);
-        }
-        // eslint-disable-next-line no-param-reassign
-        entry.kd_ratio = kd;
-        items.push(entry);
-      });
-
-      return items;
-    },
+  filters: {
+    formatPercentage: (val) => val.toFixed(2),
   },
 };
 </script>
