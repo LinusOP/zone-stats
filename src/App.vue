@@ -156,13 +156,13 @@
               <v-row justify="center">
                 <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <PointsTable
-                    title="Points of all time"
+                    title="Points for current Border Wars"
                     :entries="apiData.points.currentBorderWar"
                   />
                 </v-col>
                 <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <KillsTable
-                    title="Kills of all time"
+                    title="Kills for current Border Wars"
                     :entries="apiData.kills.currentBorderWar"
                   />
                 </v-col>
@@ -173,13 +173,13 @@
               <v-row justify="center">
                 <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <PointsTable
-                    title="Points of all time"
+                    title="Points for last Border Wars"
                     :entries="apiData.points.lastBorderWar"
                   />
                 </v-col>
                 <v-col cols="12" xl="4" lg="5" md="6" sm="12">
                   <KillsTable
-                    title="Kills of all time"
+                    title="Kills for last Border Wars"
                     :entries="apiData.kills.lastBorderWar"
                   />
                 </v-col>
