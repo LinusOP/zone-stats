@@ -5,7 +5,7 @@
       RPUK Zone Stats
       <v-spacer></v-spacer>
       <span v-if="!loading" class="text-body-2 grey--text hidden-xs-only">
-        Last Updated: {{ this.lastCall }}
+        Last Updated: {{ lastCall }}
       </span>
       <v-btn
         color="#7289DA"
@@ -14,7 +14,7 @@
         v-if="!loading"
         :disabled="btnCooldown"
         @click="refresh"
-        >{{ !this.btnCooldown ? "Refresh" : "On Cooldown" }}</v-btn
+        >{{ !btnCooldown ? "Refresh" : "On Cooldown" }}</v-btn
       >
     </v-app-bar>
     <v-main>

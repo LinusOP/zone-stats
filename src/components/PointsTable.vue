@@ -1,7 +1,7 @@
 <template>
   <v-card class="elevation-3 grey--text text--lighten-3" color="#23272A" dark>
     <v-card-title>
-      {{ this.title }}
+      {{ title }}
     </v-card-title>
     <v-divider></v-divider>
     <v-data-table
