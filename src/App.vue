@@ -151,6 +151,40 @@
                 </v-col>
               </v-row>
             </v-tab-item>
+            <!-- BW Current -->
+            <v-tab-item>
+              <v-row justify="center">
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
+                  <PointsTable
+                    title="Points of all time"
+                    :entries="apiData.points.currentBorderWar"
+                  />
+                </v-col>
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
+                  <KillsTable
+                    title="Kills of all time"
+                    :entries="apiData.kills.currentBorderWar"
+                  />
+                </v-col>
+              </v-row>
+            </v-tab-item>
+            <!-- BW Last -->
+            <v-tab-item>
+              <v-row justify="center">
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
+                  <PointsTable
+                    title="Points of all time"
+                    :entries="apiData.points.lastBorderWar"
+                  />
+                </v-col>
+                <v-col cols="12" xl="4" lg="5" md="6" sm="12">
+                  <KillsTable
+                    title="Kills of all time"
+                    :entries="apiData.kills.lastBorderWar"
+                  />
+                </v-col>
+              </v-row>
+            </v-tab-item>
           </v-tabs-items>
         </v-tabs>
       </v-container>
@@ -216,8 +250,8 @@ export default {
       loading: true,
       btnCooldown: false,
       tab: null,
-      titles: ["Last 24h", "Daily", "Weekly", "Monthly", "All Time"],
-      lastCall: moment(new Date()).format("HH:mm:ss zz"),
+      titles: ["Last 24h", "Daily", "Weekly", "Monthly", "All Time", "BW - Current", "BW - Last"],
+      lastCall: "",
     };
   },
   methods: {
