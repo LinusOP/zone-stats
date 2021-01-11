@@ -45,7 +45,12 @@ export default {
     return {
       expanded: [],
       headers: [
-        { text: "Gang", sortable: false, value: "group" },
+        {
+          text: "Gang",
+          sortable: false,
+          value: "group",
+          width: "25%",
+        },
         { text: "Kills", value: "kills", align: "center" },
         { text: "Deaths", value: "deaths", align: "center" },
         { text: "K/D Ratio", value: "kd_ratio", align: "center" },
