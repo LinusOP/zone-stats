@@ -234,7 +234,7 @@
 </template>
 
 <script>
-import moment from "moment";
+import { DateTime } from "luxon";
 import getApiData from "./api";
 import PointsTable from "./components/PointsTable.vue";
 import KillsTable from "./components/KillsTable.vue";
@@ -258,7 +258,7 @@ export default {
     refreshData() {
       getApiData().then((data) => {
         this.apiData = data;
-        this.lastCall = moment(new Date()).format("HH:mm:ss zz");
+        this.lastCall = DateTime.local().toLocaleString(DateTime.TIME_24_SIMPLE);
       });
     },
     refresh() {
@@ -270,10 +270,10 @@ export default {
       }, 15 * 1000);
     },
   },
-  mounted() {
+  created() {
     getApiData().then((data) => {
       this.apiData = data;
-      this.lastCall = moment(new Date()).format("HH:mm:ss zz");
+      this.lastCall = DateTime.local().toLocaleString(DateTime.TIME_24_SIMPLE);
       this.loading = false;
     });
   },
