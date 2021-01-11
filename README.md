@@ -12,7 +12,10 @@ Yes, this project is licensed under the [MIT License](./LICENSE). See below for 
 This project was made using the [Vue.js](https://vuejs.org/) framework, to make it actually look good I use the [Vuetify](https://vuetifyjs.com/) component library.
 I also use [Luxon](https://moment.github.io/luxon/) for some nice looking dates and times.
 
-### Project setup
+## How can I use/modify it?
+If you want to use or modify the code it's real easy to get going. Simply clone the repo and follow the below instructions to get your environment set up.
+
+### Project setup (installs dependencies)
 ```
 npm install
 ```
