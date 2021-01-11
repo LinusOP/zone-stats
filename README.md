@@ -8,6 +8,10 @@ This website fetches data about the capture zones from [Roleplay UK](https://rol
 ## Can I use the code?
 Yes, this project is licensed under the [MIT License](./LICENSE). See below for instruction on how to set up the code after cloning the repo.
 
+## How did you make this?
+This project was made using the [Vue.js](https://vuejs.org/) framework, to make it actually look good I use the [Vuetify](https://vuetifyjs.com/) component library.
+I also use [Luxon](https://moment.github.io/luxon/) for some nice looking dates and times.
+
 ### Project setup
 ```
 npm install
