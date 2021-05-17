@@ -151,31 +151,31 @@
                 </v-col>
               </v-row>
             </v-tab-item>
-            <!-- Border wars -->
+            <!-- Gang wars -->
             <v-tab-item>
               <v-row justify="center">
                 <v-col cols="12" xl="3" md="6" sm="12">
                   <PointsTable
-                    title="Points for current Border Wars"
-                    :entries="apiData.points.currentBorderWar"
+                    title="Points for current Gang Wars"
+                    :entries="apiData.points.currentGangWar"
                   />
                 </v-col>
                 <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
-                    title="Kills for current Border Wars"
-                    :entries="apiData.kills.currentBorderWar"
+                    title="Kills for current Gang Wars"
+                    :entries="apiData.kills.currentGangWar"
                   />
                 </v-col>
                 <v-col cols="12" xl="3" md="6" sm="12">
                   <PointsTable
-                    title="Points for last Border Wars"
-                    :entries="apiData.points.lastBorderWar"
+                    title="Points for last Gang Wars"
+                    :entries="apiData.points.lastGangWar"
                   />
                 </v-col>
                 <v-col cols="12" xl="3" md="6" sm="12">
                   <KillsTable
-                    title="Kills for last Border Wars"
-                    :entries="apiData.kills.lastBorderWar"
+                    title="Kills for last Gang Wars"
+                    :entries="apiData.kills.lastGangWar"
                   />
                 </v-col>
               </v-row>
@@ -245,7 +245,7 @@ export default {
       loading: true,
       btnCooldown: false,
       tab: null,
-      titles: ["Last 24h", "Daily", "Weekly", "Monthly", "All Time", "Border Wars"],
+      titles: ["Last 24h", "Daily", "Weekly", "Monthly", "All Time", "Gang Wars"],
       lastCall: "",
     };
   },
