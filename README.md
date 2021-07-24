@@ -1,7 +1,7 @@
 # RPUK Zone Stats
 
 ## What is this?
-This website fetches data about the capture zones from [Roleplay UK](https://roleplay.co.uk) and displays it in a nice fashion. You can find it here: <https://zonestats.nomad.gdn>.
+This website fetches data about the capture zones from [Roleplay UK](https://roleplay.co.uk) and displays it in a nice fashion. You can find it here: <https://zonestats.nomad.lol>.
 
 *The website uses information fetched from the Roleplay UK API, it is however not an official website and is not made nor maintained by Roleplay UK.*
 
