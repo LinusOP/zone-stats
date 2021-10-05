@@ -1,5 +1,8 @@
 # RPUK Zone Stats
 
+# Deprecated
+Due to the Roleplay UK Arma 3 Server shutting down, there is no more data to request from the API. Therefore the repository will be Archived, the site will still be live for now, but it will not be displaying any data.
+
 ## What is this?
 This website fetches data about the capture zones from [Roleplay UK](https://roleplay.co.uk) and displays it in a nice fashion. You can find it here: <https://zonestats.nomad.lol>.
 
